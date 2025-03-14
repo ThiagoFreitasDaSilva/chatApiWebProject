@@ -14,8 +14,8 @@ namespace SignalRChatServer.Controllers
 
         [HttpGet("all")]
         public async Task<IActionResult> getUsers() {
-            var user = await _userService.getAllUsersAsync();
-            return Ok(user);
+            var users = await _userService.getAllUsersAsync();
+            return Ok(users);
 
         }
     }

@@ -15,8 +15,13 @@ builder.Services.AddCors();
 builder.Services.AddDbContext<UserDbContext>(options => {
     options.UseMySQL("server=localhost;port=3306;user=root;password=psekwz;database=webchat");
 });
-builder.Services.AddControllers();
+builder.Services.AddDbContext<ConnectionDbContext>(options => {
+    options.UseMySQL("server=localhost;port=3306;user=root;password=psekwz;database=webchat");
+});
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IConnectionService, ConnectionService>();
+builder.Services.AddControllers();
+
 
 
 

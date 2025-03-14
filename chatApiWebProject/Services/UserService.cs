@@ -13,8 +13,8 @@ namespace SignalRChatServer.Services
         }
         public async Task<List<User>> getAllUsersAsync()
         {
-            var user = await this._userDbContext.User.ToListAsync();
-            return user;
+            var users = await this._userDbContext.User.ToListAsync();
+            return users;
         }
     }
 }

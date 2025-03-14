@@ -13,8 +13,6 @@ namespace SignalRChatServer.Data.Entities
         public string Password {get; set; }
 
         public string Picture {get; set; }
-
-        public string Status {get; set; }
     
     }
 }
